@@ -2,7 +2,7 @@
 function connectDB() {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "1234";
     $dbname = "instadam";
 
     // Create connection
@@ -98,5 +98,5 @@ function populateData() {
 }
 
 // Populate data
-// populateData();
+   populateData();
 ?>
