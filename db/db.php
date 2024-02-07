@@ -14,4 +14,18 @@ function getPosts() {
     mysqli_close($conn);
     return $posts;
 }
+
+function getUsersPosts($id) {
+    $conn = connectDB();
+    $sql = "SELECT * FROM posts Where user_id=$id";
+    $result = mysqli_query($conn, $sql);
+    $posts = [];
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $posts[] = $row;
+        }
+    }
+    mysqli_close($conn);
+    return $posts;
+}
 ?>

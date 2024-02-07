@@ -7,17 +7,28 @@
 </head>
 <body>
     <?php include 'components/navbar.php'; ?>
-    <h1>Instadam</h1>
+ 
     <div class="container posts">
-        <?php
-        include 'db/db.php';
-        $posts = getPosts();
-        foreach ($posts as $post) {
-        ?>
-          <!-- TODO -->
-          <span>.</span>
-        <?php } ?>
-    </div>
-    <?php include 'components/scripts.php'; ?>
+    <?php
+    include 'db/db.php';
+    $posts = getPosts();
+    foreach ($posts as $post) {
+    ?>
+        <div class="row"  style=" margin-top: 25px ; margin-bottom: 25px;">
+            <div class="col">
+                <img src="<?=$post['image_url']?>" alt="post" class="post" style="width: 100%; ">
+            </div>
+            <div class="col" >
+                <img src="<?=$post['image_url']?>" alt="post" class="post" style="width: 100%;  ">
+            </div>
+            <div class="col">
+                <img src="<?=$post['image_url']?>" alt="post" class="post" style="width: 100%;  ">
+            </div>
+        </div>
+    <?php } ?>
+</div>
+<?php include 'components/scripts.php'; ?>
 </body>
 </html>
+
+
