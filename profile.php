@@ -18,12 +18,17 @@
 
     foreach ($posts as $post) {
     ?>
-        <div class="row"  style=" margin-top: 25px ; margin-bottom: 25px;">
-            <div class="col-sm-4">
-                <img src="<?=$post['image_url']?>" alt="post" class="post" style="width: 100%; ">
-            </div>
-           
-        </div>
+                <div class="col-md-4" > <!-- Utiliza col-md-4 para crear un diseño de tres columnas en pantallas medianas -->
+                    <div class="card" style="margin-bottom: 25px;">
+                        <img src="<?= $post['image_url'] ?>" alt="post" class="card-img-top">
+                        <div class="card-body">
+                            <!-- Agrega cualquier contenido adicional que desees mostrar en la tarjeta -->
+                            <!-- Por ejemplo: -->
+                            <h5 class="card-title"><?= $post['title'] ?></h5>
+                            <p class="card-text"><?= $post['description'] ?></p>
+                        </div>
+                    </div>
+                </div>
     <?php } ?>
 </div>
 <?php include 'components/scripts.php'; ?>

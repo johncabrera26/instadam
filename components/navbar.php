@@ -19,7 +19,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-user"></i></a>
+          <a class="nav-link " href="profile.php" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-user"></i></a>
         </li>
       </ul>
       
